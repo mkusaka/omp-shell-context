@@ -62,7 +62,7 @@ Then configure npm at [package settings](https://www.npmjs.com/package/omp-shell
 Subsequent releases must have a package version matching the tag. Commit the version change, then create and push the matching tag:
 
 ```sh
-git tag v0.1.0
+git tag v<package-version>
 git push origin main --tags
 ```
 

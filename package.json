@@ -1,6 +1,6 @@
 {
   "name": "omp-shell-context",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "Expose Oh My Pi session and model context to shell commands.",
   "keywords": [
     "oh-my-pi",
