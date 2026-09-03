@@ -1,0 +1,69 @@
+{
+  "name": "omp-shell-context",
+  "version": "0.1.0",
+  "description": "Expose Oh My Pi session and model context to shell commands.",
+  "keywords": [
+    "oh-my-pi",
+    "omp",
+    "pi",
+    "pi-extension",
+    "pi-package",
+    "shell"
+  ],
+  "homepage": "https://github.com/mkusaka/omp-shell-context#readme",
+  "bugs": {
+    "url": "https://github.com/mkusaka/omp-shell-context/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkusaka/omp-shell-context.git"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "format": "oxfmt --check .",
+    "format:fix": "oxfmt --write .",
+    "lint": "oxlint src test",
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm run format && pnpm run lint && pnpm run typecheck && pnpm run test",
+    "prepack": "pnpm run check"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.84.3",
+    "@types/node": "^24.10.1",
+    "oxfmt": "0.65.0",
+    "oxlint": "1.80.0",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=0.81.0 <0.85.0"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "packageManager": "pnpm@11.22.0",
+  "omp": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  }
+}
